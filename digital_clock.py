@@ -45,22 +45,32 @@ def draw_colorful_frame():
 draw_colorful_frame()
 
 # function to display time
-def display_time_date():
-    # current time  and date using time module
+def display_time():
+    # current time  using time module
     current_time = time.strftime("%H: %M: %S")
-    current_date = time.strftime("%Y-%m-%d")
 
     # clear previous drawings
     clock_turtle.clear()
-    date_turtle.clear()
 
-    # show current time and date
+    # show current time
     clock_turtle.write(current_time, align="center", font=("Courier", 48 ,"bold"))
-    date_turtle.write(current_date, align="center", font=("Courier", 24, "bold"))
 
     # schedule the function run again after 1 second (1000ms)
-    window.ontimer(display_time_date, 1000)
+    window.ontimer(display_time, 1000)
 
-display_time_date()
+# function to display date
+def display_date():
+    # current time  and date using time module
+    current_date = time.strftime("%Y-%m-%d")
+
+    # clear previous drawings
+    date_turtle.clear()
+
+    # show current date
+    date_turtle.write(current_date, align="center", font=("Courier", 24, "bold"))
+
+
+display_time()
+display_date()
 
 window.mainloop()
