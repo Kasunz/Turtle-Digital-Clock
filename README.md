@@ -1,21 +1,15 @@
-# Python-Screen-Recorder
-
-This project builds a simple screen recorder using Python. The program continuously captures the screen at regular intervals and compiles the images into a video file, which is saved in `.avi` format.
+# Turtle-Digital-Clock
+ This project builds a digital clock using Python's Turtle graphics library. The clock continuously updates every second to display the current time in HH:MM
 
 ## Features:
-- Records your screen at a resolution of **1920x1080** (customizable based on screen size).
-- Saves the screen recording as a **.avi** video file.
-- The frame rate is set to **20 frames per second** by default.
-- Automatically stops recording after **10 seconds** (this can be customized).
-- Allows you to stop recording early by pressing the **`q`** key.
+- Displays the current time in **HH:MM:SS** format.
+- Date is shown below the time in **YYYY-MM-DD** format.
+- The time updates every second.
+- The date is updated once (no need for frequent updates).
+- Colorful frame around the clock using different colors for each side.
+- Customizable font, size, and color for both time and date.
 
-## Requirements:
-- **Python 3.x**
-- Python libraries:
-  - **pyautogui**
-  - **opencv-python**
-  - **numpy**
-
-You can install the required libraries using the following command:
-```bash
-pip install pyautogui opencv-python numpy
+## Screenshot:
+<p align="center">
+  <img src="assets/img.png" alt="Digital Clock Screenshot" width="500"/>
+</p>
