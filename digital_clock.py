@@ -15,6 +15,14 @@ clock_turtle.penup()
 clock_turtle.goto(0, 0)
 clock_turtle.speed(0)
 
+# set up turtle for drawing date
+date_turtle = turtle.Turtle()
+date_turtle.hideturtle()
+date_turtle.color("white")
+date_turtle.penup()
+date_turtle.goto(0, -30)
+date_turtle.speed(0)
+
 # setup turtle for frame around the clock
 frame_turtle = turtle.Turtle()
 frame_turtle.hideturtle()
@@ -37,16 +45,22 @@ def draw_colorful_frame():
 draw_colorful_frame()
 
 # function to display time
-def display_time():
-    # current time using time module
+def display_time_date():
+    # current time  and date using time module
     current_time = time.strftime("%H: %M: %S")
+    current_date = time.strftime("%Y-%m-%d")
+
+    # clear previous drawings
     clock_turtle.clear()
+    date_turtle.clear()
 
-    # show current time
+    # show current time and date
     clock_turtle.write(current_time, align="center", font=("Courier", 48 ,"bold"))
+    date_turtle.write(current_date, align="center", font=("Courier", 24, "bold"))
 
-    window.ontimer(display_time, 1000)
+    # schedule the function run again after 1 second (1000ms)
+    window.ontimer(display_time_date, 1000)
 
-display_time()
+display_time_date()
 
 window.mainloop()
