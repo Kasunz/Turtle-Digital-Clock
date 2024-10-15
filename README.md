@@ -11,5 +11,5 @@
 
 ## Screenshot:
 <p align="center">
-  <img src="img.png" alt="Digital Clock Screenshot" width="500"/>
+  <img src="assets/img.png" alt="Digital Clock Screenshot" width="500"/>
 </p>
