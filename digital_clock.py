@@ -60,7 +60,7 @@ def display_time():
 
 # function to display date
 def display_date():
-    # current time  and date using time module
+    # current date using time module
     current_date = time.strftime("%Y-%m-%d")
 
     # clear previous drawings
